@@ -1,0 +1,16 @@
+===Basis data karyawan
+
+== Struktur dari tabel tb_karyawan
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|name|varchar(128)|Tidak|
+|//**id**//|int(8)|Tidak|
+|email|varchar(128)|Tidak|
+|password|varchar(32)|Tidak|
+|is_active|int(1)|Tidak|
+== Dumping data untuk tabel tb_karyawan
+
+|Abdillah Ali|25|aliabdillah371@gmail.com|121212|1
+|Abdillah Ali|27|admin123@gmail.com|111111|1

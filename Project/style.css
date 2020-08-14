@@ -1,0 +1,131 @@
+/* Navbar */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.navbar-brand span {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: aliceblue;
+    color: #252a34;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.nav-link {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .btn {
+    font-size: 15px;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #ff2e63;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    height: 600px;
+}
+
+.jumbotron .row {
+    margin-top: 60px;
+}
+
+.jumbotron .display-4 {
+    color: white !important;
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+.jumbotron .lead {
+    color: white;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.jumbotron img {
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+/* utility */
+.tombol {
+    text-transform: capitalize;
+    border-radius: 40px;
+}
+
+/* Content */
+
+.container .content h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.content-1 .row {
+    margin-top: 50px;
+}
+
+.content-1 h3{
+    font-size: 15px;
+    text-align: center;
+}
+.content-2 .btn {
+    background-color: #ff2e63;
+    margin-bottom: 10px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #252a34;
+}
+
+.footer p {
+    padding: 30px 0;
+    margin-bottom: 0;
+}
+
+
+/* Desktop */
+@media (min-width: 992px) {
+    .navbar-brand, .nav-link {
+        color: white !important;
+        margin-right: 30px;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid white;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .jumbotron {
+        margin-top: -75px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .nav-link {
+        margin-bottom: 20px;
+    }
+
+    .tombol {
+        color:white !important;
+        background-color: #252a34;
+    }
+ }

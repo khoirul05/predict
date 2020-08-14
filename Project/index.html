@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- My Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script Graph -->
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Contract', 'BID', 'OFFER'],
+        ['Cash', 1687, 1650],
+        ['3', 1726, 1750],
+        ['D1', 1809, 1850],
+        ['D2', 1880, 1840]
+      ]);
+
+      var options = {
+        title: 'Prices Graph (US$ Per Tonne)',
+        curveType: 'function',
+        legend: {
+          position: 'bottom'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+  <!-- Chart 2 -->
+
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date', 'Price'],
+        ['22 Juli', 1651],
+        ['23 Juli', 1661],
+        ['24 Juli', 1654],
+        ['27 Juli', 1661],
+        ['28 Juli', 1671],
+        ['29 Juli', 1687],
+        ['30 Juli', 1685]
+      ]);
+
+      var options = {
+        title: 'Price (US$ Per Tonne)',
+        hAxis: {
+          title: 'Date',
+          titleTextStyle: {
+            color: '#333'
+          }
+        },
+        vAxis: {
+          minValue: 0
+        }
+      };
+
+      var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+  </script>
+
+  <title>Predict</title>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <span>P</span>
+        Predict
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">Features</a>
+          <a class="nav-item nav-link" href="#">About</a>
+          <a class="nav-item btn btn-light text-dark tombol" href="#">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir Navbar -->
+
+  <!-- Jumbotron -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="display-4">Forecasting <span>System</span></h1>
+          <p class="lead">Lorem ipsum dolor sit amet consectr, adipisicing elit. </p>
+        </div>
+        <div class="col">
+          <img src="img/undraw_growth_analytics_8btt.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Akhir Jumbotron -->
+
+  <!-- Content -->
+
+  <div class="container">
+    <div class="content">
+      <div class="content-1">
+        <h2>TRADING SUMMARY</h2>
+        <div class="row">
+          <div class="col">
+            <h3>LME Alumunium Official Prices, US$ Per Tonne</h3>
+            <!-- table -->
+            <table class="table table-bordered mt-4">
+              <thead class="thead-dark text-center">
+                <tr>
+                  <th scope="col">CONTRACT</th>
+                  <th scope="col">BID (US$/TONNE)</th>
+                  <th scope="col">OFFER (US$/TONNE)</th>
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <tr>
+                  <th scope="row" class="bg-danger text-light text-left">Cash</th>
+                  <td>1687.00</td>
+                  <td>1687.00</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="bg-danger text-light text-left">3-months</th>
+                  <td>1726.00</td>
+                  <td>1726.00</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="bg-danger text-light text-left">Dec 21</th>
+                  <td>1809.00</td>
+                  <td>1726.00</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="bg-danger text-light text-left">Dec 22</th>
+                  <td>1880.00</td>
+                  <td>1726.00</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- akhir table -->
+          </div>
+          <div class="col">
+            <h3>LME Alumunium Official Prices Graph</h3>
+            <div id="curve_chart" style="width: 600px; height: 300px; margin:auto;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-2 text-center">
+        <h2>LME Alumunium Price Graph</h2>
+        <div id="chart_div" style="width: 100%; height: 500px; "></div>
+        <button type="button" class="btn btn-danger mt-2">See All Data</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Akhir Content -->
+  <!-- Footer -->
+  <div class="footer">
+    <p class="copy text-center text-light">Copyright 2020 Predict. all rights reserved</p>
+  </div>
+  <!-- Akhir Footer -->
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <script src="h
+ ttps://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
